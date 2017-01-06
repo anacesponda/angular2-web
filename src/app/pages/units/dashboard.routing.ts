@@ -1,7 +1,6 @@
 import { Routes, RouterModule }  from '@angular/router';
 
 import { Dashboard } from './dashboard.component';
-import {UnitComponent} from "./unit/unit.component";
 
 // noinspection TypeScriptValidateTypes
 const routes: Routes = [
@@ -9,7 +8,7 @@ const routes: Routes = [
     path: '',
     component: Dashboard,
     children: [
-      { path: 'unit', component: UnitComponent }
+      //{ path: 'treeview', component: TreeViewComponent }
     ]
   }
 ];

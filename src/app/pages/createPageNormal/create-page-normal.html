@@ -1,0 +1,68 @@
+<div class="row"  name='ana'>
+  <div class="row" *ngIf="unit">
+    <div class="col-md-6">
+      <div>
+        <ba-card title="Creación de Página" baCardClass="with-scroll">
+          <form name="ana">
+            <div class="form-group">
+              <label for="exampleInputEmail1">Título:</label>
+              <input name='titulo' [(ngModel)]="page.title"  type="text" class="form-control" id="exampleInputEmail1" placeholder="Título">
+            </div>
+            <div class="form-group">
+              <label>Número de la Página</label>
+              <input name='number'[(ngModel)]="page.number" type="number"  class="form-control" placeholder="Ej : 2">
+            </div>
+
+            <div class="form-group">
+              <label>TEXTO:</label>
+              <ckeditor-component #f></ckeditor-component>
+            </div>
+
+            <div class="form-group">
+              <label>Comentarios para los desarrolladores</label>
+              <textarea name='number'[(ngModel)]="page.comments" type="number"  class="form-control" placeholder="Ej : 2"></textarea>
+            </div>
+
+            <div class="form-group">
+              <button type="submit" (click)="save()" class="btn btn-info">Guardar Cambios</button>
+            </div>
+          </form>
+        </ba-card>
+      </div>
+    </div>
+
+<!--PREVIEWWWW-->
+    <div class="col-md-6">
+      <div>
+        <ba-card title="Vista Previa" baCardClass="with-scroll">
+          <div class="row">
+            <div class="col-md-6">
+            <div class="form-group">
+              <h3>Nombre:</h3>
+              <label for="exampleInputEmail1">{{unit.title}}</label>
+            </div>
+            <div class="form-group">
+              <h3>Número::</h3>
+              <label for="exampleInputEmail1">{{unit.number}}</label>
+            </div></div>
+          </div>
+          <div class="row">
+            <div class="col-md-6">
+              <div class="form-group">
+                <h3>Texto:</h3>
+                <div [innerHTML]="f.ckeditorContent"></div>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="form-group">
+                <img width="250px" src="https://upload.wikimedia.org/wikipedia/commons/f/f9/Phoenicopterus_ruber_in_S%C3%A3o_Paulo_Zoo.jpg">
+              </div>
+            </div>
+          </div>
+
+        </ba-card>
+      </div>
+    </div>
+  </div>
+</div>
+<router-outlet></router-outlet>

@@ -27,6 +27,7 @@ import { IconsService } from './components/icons/icons.service';
   imports: [
     CommonModule,
     FormsModule,
+
     NgaModule,
     DropdownModule,
     ModalModule,

@@ -46,6 +46,9 @@ import { WithoutLabelsForm } from './components/layouts/components/withoutLabels
     HorizontalForm,
     BasicForm,
     WithoutLabelsForm
+  ],
+  exports: [
+    BasicForm
   ]
 })
 export default class FormsModule {

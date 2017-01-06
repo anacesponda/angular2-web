@@ -1,0 +1,17 @@
+<div class="task-todo-container">
+  <input type="text" value="" class="form-control task-todo" placeholder="Nombre de la unidad" (keyup)="addUnitItem($event)" [(ngModel)]="newUnitText"/>
+  <i (click)="addUnitItem($event)" class="add-item-icon ion-plus-round"></i>
+  <div class="box-shadow-border"></div>
+
+  <ul class="todo-list">
+    <li *ngFor="let item of units"
+        (mouseenter)="item.isActive=true" (mouseleave)="item.isActive=false" (click)="gotoDetail(item)">
+      <a  routerLink="/pages/unitdetail/1" >
+      <div class="blur-container"><div class="blur-box"></div></div>
+      <i class="mark" [ngStyle]="{ 'background-color': item.color }"></i>
+      <label class="todo custom-input-success">
+        <span class="cut-with-dots">{{ item.title }}</span>
+      </label></a>
+    </li>
+  </ul>
+</div>

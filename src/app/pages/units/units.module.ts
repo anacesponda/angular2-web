@@ -6,7 +6,7 @@ import { NgaModule } from '../../theme/nga.module';
 import { Dashboard } from './dashboard.component';
 import { routing }       from './dashboard.routing';
 import {UnitService} from "./unit/unit.service";
-import {UnitComponent} from "./unit/unit.component";
+import {Unit} from "./unit/unit.component";
 
 
 @NgModule({
@@ -19,7 +19,7 @@ import {UnitComponent} from "./unit/unit.component";
   declarations: [
 
     Dashboard,
-    UnitComponent,
+    Unit,
   ],
   providers: [
     UnitService,

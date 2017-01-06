@@ -1,4 +1,5 @@
 import {Component, ViewEncapsulation} from '@angular/core';
+import {Router} from "@angular/router";
 
 @Component({
   selector: 'dashboard',
@@ -8,7 +9,15 @@ import {Component, ViewEncapsulation} from '@angular/core';
 })
 export class Dashboard {
 
-  constructor() {
+  constructor(    private router: Router) {
+  }
+
+  gotoDetail(): void {
+    let link = ['../pages/units/1'];
+    this.router.navigate(link).then(()=>{console.log('ENTRA A THEN')})
+      .catch((error) => {
+        console.log("erroooor", error);
+      });;
   }
 
 }
