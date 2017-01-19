@@ -5,6 +5,7 @@ import {Params, ActivatedRoute} from "@angular/router";
 import { Location }               from '@angular/common';
 import {Page} from "../models/page-model";
 import {Unit} from "../dashboard/unit-model";
+import {PageNormal} from "./page-normal";
 
 @Component({
   selector: 'unit-details',
@@ -12,12 +13,14 @@ import {Unit} from "../dashboard/unit-model";
 })
 export class CreatePageNormalComponent {
   page: Page;
+  pageNormal: PageNormal;
   unit: Unit;
 
   constructor( private unitService: UnitService,
                private route: ActivatedRoute,
                private location: Location) {
     this.page = new Page();
+    this.pageNormal = new PageNormal();
   }
 
   ngOnInit(): void {
@@ -27,9 +30,11 @@ export class CreatePageNormalComponent {
   }
 
   save(text: string): void {
-    this.page.pageObject = text;
     this.page.templateType = 'basicPage';
     this.page.UnitId = 1;
+    console.log('JSON CREADO', this.pageNormal.toJson());
+    this.page.pageObject = this.pageNormal.toJson();
+    console.log('PAGE SAVED', this.page);
     this.unitService.createPage(this.page)
       .then(() => this.goBack());
   }

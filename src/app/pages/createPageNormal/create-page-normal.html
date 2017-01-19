@@ -17,14 +17,58 @@
               <label>TEXTO:</label>
               <ckeditor-component #f></ckeditor-component>
             </div>
-
             <div class="form-group">
-              <label>Comentarios para los desarrolladores</label>
-              <textarea name='number'[(ngModel)]="page.comments" type="number"  class="form-control" placeholder="Ej : 2"></textarea>
+              <label for="exampleInputEmail1">Imágen Horizontal:</label>
+              <input name='imgHorizontal' [(ngModel)]="pageNormal.imgHorizontal"  type="text" class="form-control" id="exampleInputEmail1" placeholder="Link a la imagen horizontal">
+            </div>
+            <div class="form-group">
+              <label for="exampleInputEmail1">Imágen Vertical:</label>
+              <input name='imgHorizontal' [(ngModel)]="pageNormal.imgVertical"  type="text" class="form-control" id="exampleInputEmail2" placeholder="Link a la imagen Vertical">
             </div>
 
             <div class="form-group">
-              <button type="submit" (click)="save()" class="btn btn-info">Guardar Cambios</button>
+              <label for="exampleSelect1">Posición Img:</label>
+              <select class="form-control" [(ngModel)]="pageNormal.posicionImg" id="exampleSelect1" name="posImg">
+                <option>Izquierda</option>
+                <option>Derecha</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="exampleInputEmail1">Guía Docente:</label>
+              <input name='guiaDocente' [(ngModel)]="pageNormal.guiaDocente"  type="text" class="form-control" id="exampleInputEmail2" placeholder="Link a la imagen de Guía Docente">
+            </div>
+            <div class="form-group">
+              <label for="exampleInputEmail1">Curiosidades:</label>
+              <input name='curiosidades' [(ngModel)]="pageNormal.curiosidades"  type="text" class="form-control" id="exampleInputEmail2" placeholder="Link a la imagen de Curiosidades">
+            </div>
+            <div class="form-group">
+              <label for="exampleInputEmail1">Curiosidades:</label>
+              <input name='paraSaberMas' [(ngModel)]="pageNormal.paraSaberMas"  type="text" class="form-control" id="paraSaberMas" placeholder="Link a la imagen de Para Saber Mas">
+            </div>
+            <div class="form-group">
+              <label for="exampleInputEmail1">LectoEscritura:</label>
+              <input name='lecto' [(ngModel)]="pageNormal.lectoEscritura"  type="text" class="form-control" id="lecto" placeholder="Link a la imagen de Lecto Escritura">
+            </div>
+            <div class="form-group">
+              <label for="exampleInputEmail1">Profundicemos:</label>
+              <input name='prof' [(ngModel)]="pageNormal.profundicemos"  type="text" class="form-control" id="profund" placeholder="Link a la imagen de Profundicemos">
+            </div>
+            <div class="form-group">
+              <label for="exampleInputEmail1">Sonido:</label>
+              <input name='prof' [(ngModel)]="pageNormal.sonido"  type="text" class="form-control" id="sonido" placeholder="Link a la imagen de Sonido">
+            </div>
+            <div class="form-group">
+              <label for="exampleInputEmail1">Diálogos:</label>
+              <input name='prof' [(ngModel)]="pageNormal.dialogos"  type="text" class="form-control" id="dia" placeholder="Link a la imagen de Dialogos">
+            </div>
+
+            <div class="form-group">
+              <label>Comentarios para los desarrolladores</label>
+              <textarea name='comments'[(ngModel)]="page.comments" type="text"  class="form-control" placeholder="Aquí van sus comentarios"></textarea>
+            </div>
+
+            <div class="form-group">
+              <button type="submit" (click)="save()" class="btn btn-info">Crear Página</button>
             </div>
           </form>
         </ba-card>

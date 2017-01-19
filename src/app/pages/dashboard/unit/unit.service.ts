@@ -8,8 +8,8 @@ import {Page} from "../../models/page-model";
 @Injectable()
 export class UnitService {
   private headers = new Headers({'Content-Type': 'application/json'});
-  private unitUrl = 'http://localhost:5000/v1/units';  // URL to web api
-  private pageUrl = 'http://localhost:5000/v1/pages';  // URL to web api
+  private unitUrl = 'https://edu-api-node.herokuapp.com/v1/units';  // URL to web api
+  private pageUrl = 'https://edu-api-node.herokuapp.com/v1/pages';  // URL to web api
   private _unitList = [
     { text: 'Unidad de Prueba' }
   ];

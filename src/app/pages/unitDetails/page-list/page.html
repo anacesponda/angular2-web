@@ -1,0 +1,13 @@
+<div class="task-todo-container">
+
+  <ul class="todo-list">
+    <li *ngFor="let item of pages"
+        (mouseenter)="item.isActive=true" (mouseleave)="item.isActive=false" (click)="gotoDetail(item.id)">
+      <div class="blur-container"><div class="blur-box"></div></div>
+      <i class="mark" [ngStyle]="{ 'background-color': item.color }"></i>
+      <label class="todo custom-input-success">
+        <span class="cut-with-dots">{{ item.title }}</span>
+      </label>
+    </li>
+  </ul>
+</div>

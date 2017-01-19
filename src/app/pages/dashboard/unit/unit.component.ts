@@ -23,7 +23,7 @@ export class UnitComponent implements OnInit{
   public newUnitText:string = '';
 
   private headers = new Headers({'Content-Type': 'application/json'});
-  private unitUrl = 'http://localhost:5000/v1/units';  // URL to web api
+  private unitUrl = 'https://edu-api-node.herokuapp.com/v1/units';  // URL to web api
 
   constructor(private _baConfig:BaThemeConfigProvider, private _unitService:UnitService, private http: Http, private router: Router,) {
     this.unitList = this._unitService.getUnitList();
